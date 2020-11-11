@@ -1,5 +1,4 @@
 /*eslint-disable react/prop-types*/
-/*eslint-disable no-unused-vars*/
 import React, { useState, useContext, createContext } from 'react';
 import {
   Container,
@@ -47,6 +46,11 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
       {...restProps}
     >
       {children}
+      {toggleShow ? (
+        <img src='/images/icons/close-slim.png' alt='Close' />
+      ) : (
+        <img src='/images/icons/add.png' alt='Open' />
+      )}
     </Header>
   );
 };
