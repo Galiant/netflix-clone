@@ -4,7 +4,7 @@ import { HeaderContainer } from '../containers/header';
 import FooterContainer from '../containers/footer';
 import { Form } from '../components';
 
-export default function Signin() {
+export default function SignIn() {
   const [emailAddress, setEmailAddress] = useState();
   const [password, setPassword] = useState();
   const [error, setError] = useState('');
@@ -27,7 +27,7 @@ export default function Signin() {
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
             />
-            <Form.Password
+            <Form.Input
               type='password'
               placeholder='Password'
               autoComplete='off'

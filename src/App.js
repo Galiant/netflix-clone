@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as ROUTES from './constants/routes';
-import { Home, Browse, Signin, Signup } from './pages';
+import { Home, Browse, SignIn, SignUp } from './pages';
 
 function App() {
   return (
@@ -10,10 +10,10 @@ function App() {
         <Browse />
       </Route>
       <Route exact path={ROUTES.SIGN_IN}>
-        <Signin />
+        <SignIn />
       </Route>
       <Route exact path={ROUTES.SIGN_UP}>
-        <Signup />
+        <SignUp />
       </Route>
       <Route exact path={ROUTES.HOME}>
         <Home />
