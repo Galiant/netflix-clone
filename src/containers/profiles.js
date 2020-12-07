@@ -1,3 +1,4 @@
+/*eslint-disable react/prop-types*/
 import React from 'react';
 import { Header, Profiles } from '../components';
 import * as ROUTES from '../constants/routes';
@@ -13,9 +14,16 @@ export function SelectProfileContainer({ user, setProfile }) {
       </Header>
 
       <Profiles>
-        <Profiles.Title>Who's watching?</Profiles.Title>
+        <Profiles.Title>Who is watching?</Profiles.Title>
         <Profiles.List>
-          <Profiles.User>
+          <Profiles.User
+            onClick={() =>
+              setProfile({
+                displayName: user.displayName,
+                photoURL: user.photoURL,
+              })
+            }
+          >
             <Profiles.Picture src={user.photoURL} />
             <Profiles.Name>{user.displayName}</Profiles.Name>
           </Profiles.User>
