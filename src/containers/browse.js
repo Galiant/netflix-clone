@@ -22,7 +22,16 @@ export function BrowseContainer({ slides }) {
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
       <Header src='joker1'>
-        <p>Hello</p>
+        <Header.Feature>
+          <Header.FeatureText>Watch Joker Now</Header.FeatureText>
+          <Header.Text>
+            Joker is a 2019 American psychological thriller film directed and
+            produced by Todd Phillips, who co-wrote the screenplay with Scott
+            Silver. The film, based on DC Comics characters, stars Joaquin
+            Phoenix as the Joker and provides an alternative origin story for
+            the character.
+          </Header.Text>
+        </Header.Feature>
       </Header>
     </>
   ) : (
