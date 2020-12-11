@@ -84,4 +84,5 @@ export const FeatureText = styled.h2`
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0;
+  margin-bottom: 20px;
 `;

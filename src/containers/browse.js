@@ -4,6 +4,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { SelectProfileContainer } from './profiles';
 import { FirebaseContext } from '../context/firebase';
 import { Header, Loading } from '../components';
+import * as ROUTES from '../constants/routes';
+import logo from '../logo.svg';
 
 export function BrowseContainer({ slides }) {
   const [profile, setProfile] = useState({});
@@ -22,6 +24,9 @@ export function BrowseContainer({ slides }) {
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
       <Header src='joker1'>
+        <Header.Frame>
+          <Header.Logo to={ROUTES.HOME} src={logo} alt='Netflix' />
+        </Header.Frame>
         <Header.Feature>
           <Header.FeatureText>Watch Joker Now</Header.FeatureText>
           <Header.Text>
