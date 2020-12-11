@@ -7,6 +7,16 @@ export const Background = styled.div`
   background: url(${({ src }) =>
       src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
     top left / cover no-repeat;
+
+  @media (max-width: 1100px) {
+    ${({ dontShowOnSmallViewPort }) =>
+      dontShowOnSmallViewPort && `background: none;`}
+  }
+`;
+
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const Frame = styled.div``;
@@ -26,6 +36,41 @@ export const Container = styled.div`
   @media (max-width: 1000px) {
     margin: 0 30px;
   }
+`;
+
+export const Dropdown = styled.div`
+  display: none;
+  background-color: black;
+  position: absolute;
+  padding: 10px;
+  width: 100px;
+  top: 32px;
+  right: 10px;
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+
+  button {
+    cursor: pointer;
+  }
+
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const Picture = styled.button`
+  background: url(${({ src }) => src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 `;
 
 export const Logo = styled.img`
@@ -75,6 +120,21 @@ export const Text = styled.p`
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0;
+`;
+
+export const Link = styled.p`
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 export const FeatureText = styled.h2`
