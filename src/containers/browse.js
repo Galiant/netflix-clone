@@ -61,6 +61,7 @@ export function BrowseContainer({ slides }) {
             Phoenix as the Joker and provides an alternative origin story for
             the character.
           </Header.Text>
+          <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
     </>
