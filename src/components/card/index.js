@@ -1,6 +1,16 @@
 /*eslint-disable react/prop-types*/
 import React, { useState, useContext, createContext } from 'react';
-import { Group } from '../header/styles/header';
+import {
+  Container,
+  Group,
+  Title,
+  SubTitle,
+  Text,
+  Entities,
+  Meta,
+  Item,
+  Image,
+} from './styles/card';
 
 export const FeatureContext = createContext();
 
@@ -31,6 +41,10 @@ Card.SubTitle = function CardSubTitle({ children, ...restProps }) {
 
 Card.Text = function CardText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
+};
+
+Card.Entities = function CardEntities({ children, ...restProps }) {
+  return <Entities {...restProps}>{children}</Entities>;
 };
 
 Card.Meta = function CardMeta({ children, ...restProps }) {
