@@ -28,4 +28,4 @@ export const Entities = styled.div``;
 
 export const Item = styled.div``;
 
-export const Image = styled.image``;
+export const Image = styled.img``;
