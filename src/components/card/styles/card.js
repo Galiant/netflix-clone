@@ -32,6 +32,7 @@ export const Group = styled.div`
     flexDirection === 'row' ? 'row' : 'column'};
   ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
+
   > ${Container}:first-of-type {
     @media (min-width: 1100px) {
       margin-top: -150px;
@@ -39,17 +40,64 @@ export const Group = styled.div`
   }
 `;
 
-export const SubTitle = styled.p``;
+export const SubTitle = styled.p`
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  user-select: none;
+  display: none;
+`;
 
-export const Text = styled.p``;
-
-export const Feature = styled.div``;
-
-export const FeatureTitle = styled(Title)`
-  margin-left: 0;
+export const Text = styled.p`
+  margin-top: 5px;
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 0;
+  user-select: none;
+  display: none;
+  line-height: normal;
 `;
 
 export const FeatureText = styled.p`
+  font-size: 18px;
+  color: white;
+  font-weight: ${({ fontWeight }) =>
+    fontWeight === 'bold' ? 'bold' : 'normal'};
+  margin: 0;
+
+  @media (max-width: 600px) {
+    line-height: 22px;
+  }
+`;
+
+export const Feature = styled.div`
+  display: flex;
+  flex-direction: row;
+  background: url(${({ src }) => src});
+  background-size: contain;
+  position: relative;
+  height: 360px;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-color: black;
+
+  @media (max-width: 1000px) {
+    height: auto;
+    background-size: auto;
+    ${Title} {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    ${FeatureText} {
+      font-size: 14px;
+    }
+  }
+`;
+
+export const FeatureTitle = styled(Title)`
   margin-left: 0;
 `;
 
@@ -61,6 +109,7 @@ export const FeatureClose = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: 0;
+
   img {
     filter: brightness(0) invert(1);
     width: 24px;
@@ -103,7 +152,42 @@ export const Entities = styled.div`
   flex-direction: row;
 `;
 
-export const Item = styled.div``;
+export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.3);
+    z-index: 99;
+  }
+
+  @media (min-width: 1200px) {
+    &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
+      display: block;
+      z-index: 100;
+    }
+  }
+
+  &:first-of-type {
+    margin-left: 56px;
+
+    @media (max-width: 1000px) {
+      margin-left: 30px;
+    }
+  }
+
+  &:last-of-type {
+    margin-right: 56px;
+
+    @media (max-width: 1000px) {
+      margin-right: 30px;
+    }
+  }
+`;
 
 export const Image = styled.img`
   border: 0;
