@@ -1,4 +1,5 @@
 /*eslint-disable react/prop-types*/
+/*eslint-disable no-unused-vars*/
 import React, { useState, useContext, createContext } from 'react';
 import ReactDOM from 'react-dom';
 import { Container, Button, Overlay, Inner, Close } from './styles/player';
@@ -20,14 +21,15 @@ Player.Video = function PlayerVideo({ src, ...restProps }) {
 
   return showPlayer
     ? ReactDOM.createPortal(
-        <Overlay onClick={() => setShowPlayer(false)}>
+        <Overlay onClick={() => setShowPlayer(false)} {...restProps}>
           <Inner>
             <video id='netflix-player' controls>
               <source src={src} type='video/mp4' />
             </video>
             <Close />
           </Inner>
-        </Overlay>
+        </Overlay>,
+        document.body
       )
     : null;
 };
