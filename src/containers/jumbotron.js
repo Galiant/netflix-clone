@@ -12,7 +12,11 @@ function JumbotronContainer() {
             <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
           </Jumbotron.Pane>
           <Jumbotron.Pane>
-            <Jumbotron.Image src={item.image} alt={item.alt} />
+            <Jumbotron.Image
+              src={item.image}
+              alt={item.alt}
+              data-testid={`${item.id}-jumbo-image`}
+            />
           </Jumbotron.Pane>
         </Jumbotron>
       ))}
