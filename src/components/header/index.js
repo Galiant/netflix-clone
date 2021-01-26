@@ -65,7 +65,7 @@ Header.Search = function HeaderSearch({
         onChange={({ target }) => setSearchTerm(target.value)}
         placeholder='Search films and series'
         active={searchActive}
-        daya-testid='search-input'
+        data-testid='search-input'
       />
     </Search>
   );

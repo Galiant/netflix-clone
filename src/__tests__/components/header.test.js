@@ -7,7 +7,7 @@ jest.mock('react-router-dom');
 
 describe('Header', () => {
   it('renders basic Header without a background', () => {
-    const { container, getByText, getByTestId } = render(
+    const { container, getByText, queryByTestId } = render(
       <Header bg={false}>
         <Header.Frame>
           <Header.Logo alt='Netflix' src='/logo.svg' />
@@ -17,7 +17,7 @@ describe('Header', () => {
     );
 
     expect(getByText('Hello I am a link!')).toBeTruthy();
-    expect(getByTestId('header-bg')).toBeFalsy();
+    expect(queryByTestId('header-bg')).toBeFalsy();
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -62,9 +62,7 @@ describe('Header', () => {
     );
     expect(getByTestId('search-input')).toBeTruthy();
     expect(getByTestId('search-input').value).toBe('Joker');
-    userEvent.change(getByTestId('search-input'), {
-      target: { value: 'Simpsons' },
-    });
+    userEvent.type(getByTestId('search-input'), 'Simpsons');
     userEvent.click(getByTestId('search-click'));
     expect(getByText('Series')).toBeTruthy();
     expect(getByText('Films')).toBeTruthy();

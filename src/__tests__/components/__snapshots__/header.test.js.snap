@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders basic Header without a background 1`] = `
+<div
+  class="header__Container-t8lkk2-3 dsukoR"
+>
+  <p
+    class="header__Link-t8lkk2-5 fYkiTA"
+  >
+    Hello I am a link!
+  </p>
+</div>
+`;
+
+exports[`Header renders full Header with a background 1`] = `
+<div
+  class="header__Background-t8lkk2-0 cwUAtN"
+  data-testid="header-bg"
+  src="joker1"
+>
+  <div
+    class="header__Container-t8lkk2-3 dsukoR"
+  >
+    <div
+      class="header__Group-t8lkk2-1 hNdlqq"
+    >
+      <p
+        class="header__Link-t8lkk2-5 jvjwEc"
+      >
+        Series
+      </p>
+      <p
+        class="header__Link-t8lkk2-5 jvjwEc"
+      >
+        Films
+      </p>
+    </div>
+    <div
+      class="header__Group-t8lkk2-1 hNdlqq"
+    >
+      <div
+        class="header__Search-t8lkk2-7 iiBTmq"
+      >
+        <button
+          class="header__SearchIcon-t8lkk2-8 dMRHCr"
+          data-testid="search-click"
+        >
+          <img
+            alt="Search"
+            src="/images/icons/search.png"
+          />
+        </button>
+        <input
+          class="header__SearchInput-t8lkk2-9 crdRlb"
+          data-testid="search-input"
+          placeholder="Search films and series"
+          value="Joker"
+        />
+      </div>
+      <div
+        class="header__Profile-t8lkk2-11 jfbVpf"
+      >
+        <button
+          class="header__Picture-t8lkk2-4 dHQAYc"
+          src="/images/users//images/karl.png.png"
+        />
+        <div
+          class="header__Dropdown-t8lkk2-6 jIQDsg"
+        >
+          <div
+            class="header__Group-t8lkk2-1 hNdlqq"
+          >
+            <button
+              class="header__Picture-t8lkk2-4 dHQAYc"
+              src="/images/users//images/karl.png.png"
+            />
+            <p
+              class="header__Link-t8lkk2-5 jvjwEc"
+            >
+              Antonijo
+            </p>
+          </div>
+          <div
+            class="header__Group-t8lkk2-1 hNdlqq"
+          >
+            <p
+              class="header__Link-t8lkk2-5 jvjwEc"
+            >
+              Sign out
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="header__Container-t8lkk2-3 header__Feature-t8lkk2-14 dsukoR dYkPzg"
+  >
+    <h2
+      class="header__FeatureText-t8lkk2-16 bzSdnR"
+    >
+      Watch Joker Now
+    </h2>
+    <p
+      class="header__Text-t8lkk2-15 daqyUi"
+    >
+      Forever alone in a crowd...
+    </p>
+    <button
+      class="header__PlayButton-t8lkk2-10 jnWiig"
+    >
+      Play
+    </button>
+  </div>
+</div>
+`;
